@@ -1,3 +1,368 @@
+main h1 {
+  text-align: center;
+  font-family: "Advent Pro", Arial, sans-serif; }
+main h2 {
+  font-family: "Advent Pro", Arial, sans-serif; }
+main h4 {
+  font-family: "Advent Pro", Arial, sans-serif;
+  margin-bottom: 5px; }
+main .insfelt {
+  padding: 30px;
+  background-color: #f3f3f3; }
+main .inspriration {
+  margin: 0 50px 0 50px; }
+  main .inspriration a {
+    background-color: #444444;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px 50px;
+    display: inline-block; }
+  main .inspriration .kategorerbar {
+    display: flex;
+    flex-flow: column; }
+    main .inspriration .kategorerbar a {
+      background-color: #2a363b;
+      color: honeydew;
+      padding: 10px 30px;
+      cursor: pointer;
+      margin: 5px 50px;
+      padding: 4px; }
+main .map {
+  display: flex;
+  flex-direction: column; }
+  main .map .postnummer input {
+    width: 90%;
+    height: 30px;
+    padding: 10px;
+    font-size: medium;
+    border: 1px solid #e84a5f;
+    border-radius: 3px; }
+  main .map .soegeforslag {
+    height: 300px;
+    overflow: hidden;
+    overflow-y: scroll; }
+    main .map .soegeforslag .forslag {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: white;
+      padding: 5px; }
+      main .map .soegeforslag .forslag h4 {
+        font-family: "Advent Pro", Arial, sans-serif;
+        margin: 2px; }
+      main .map .soegeforslag .forslag p {
+        font-family: "Advent Pro", Arial, sans-serif;
+        color: #e84a5f;
+        margin: 2px;
+        font-size: small; }
+      main .map .soegeforslag .forslag img {
+        height: 60px;
+        width: 60px;
+        margin: 0px; }
+      main .map .soegeforslag .forslag button {
+        background-color: white;
+        border: none;
+        width: 30%;
+        font-size: large;
+        font-family: "Advent Pro", Arial, sans-serif;
+        color: #e84a5f;
+        font-weight: 500;
+        border: 1px solid #e84a5f; }
+      main .map .soegeforslag .forslag button:hover {
+        background-color: #e84a5f;
+        color: white; }
 
+.soegningkrap {
+  display: flex;
+  justify-content: flex-end; }
+  .soegningkrap a {
+    background-color: #444444;
+    color: white;
+    padding: 10px 30px;
+    color: #e84a5f;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px 50px;
+    display: inline-block; }
+
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px) {
+    .gridinspiration {
+      display: grid;
+      grid-template-columns: 66% 33%;
+      grid-template-areas: "overskriv overskriv" "bar map" "soegningkrap ."; }
+
+    .overskriv {
+      grid-area: overskriv; }
+
+    .inspriration {
+      grid-area: bar; }
+
+    .map {
+      grid-area: map; }
+
+    .soegningkrap {
+      grid-area: soegningkrap; } } }
+nav {
+  margin: 0;
+  padding: 0; }
+  nav .logo {
+    padding: 1.2em 1.3em; }
+    nav .logo img {
+      width: 150px; }
+  nav .menu-toggle {
+    position: absolute;
+    padding: 0.8em;
+    top: 2.2em;
+    right: .5em;
+    cursor: pointer; }
+    nav .menu-toggle .hamburger, nav .menu-toggle .hamburger::before, nav .menu-toggle .hamburger::after {
+      content: '';
+      display: block;
+      background: #2a363b;
+      height: 3px;
+      width: 2em;
+      border-radius: 3px;
+      -webkit-transition: all ease-in-out 350ms;
+      transition: all ease-in-out 350ms; }
+    nav .menu-toggle .hamburger::before {
+      -webkit-transform: translateY(-7px);
+      transform: translateY(-7px); }
+    nav .menu-toggle .hamburger::after {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px); }
+    nav .menu-toggle .open .hamburger {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    nav .menu-toggle .open .hamburger::before {
+      display: none; }
+    nav .menu-toggle .open .hamburger::after {
+      -webkit-transform: translateY(-1px) rotate(-90deg);
+      transform: translateY(-1px) rotate(-90deg); }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; }
+    nav ul li {
+      border-bottom: 1px solid #f3f3f3; }
+    nav ul .lastchild {
+      border-bottom: none; }
+    nav ul a {
+      color: #2a363b;
+      background: #fff;
+      display: block;
+      padding: 1em 4em 1em 3em;
+      font-family: "Advent Pro", Arial, sans-serif;
+      font-size: 1.3em;
+      text-decoration: none; }
+    nav ul a:hover, nav ul nav a:focus {
+      background: #f3f3f3; }
+  nav nav ul.opening {
+    display: block;
+    height: 30px; }
+  nav .site-nav--icon {
+    font-size: 2em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: #2a363b; }
+  nav .header-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    nav .header-icons a {
+      padding: 0.8em; }
+    nav .header-icons img {
+      width: 50px;
+      height: 50px; }
+
+.menu-valg {
+  display: none; }
+
+@media (min-width: 780px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #fff; }
+    nav .logo {
+      flex: 0 0 200px;
+      margin: 0;
+      padding-left: 20px; }
+    nav .menu-toggle {
+      display: none; }
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin: auto auto auto 7%; }
+      nav ul li {
+        flex: 1 1 auto;
+        border: none; }
+        nav ul li a {
+          padding: 1.5em 1.3em 1.5em 1.3em;
+          margin: 0;
+          border: none;
+          background-color: #fff; }
+        nav ul li nav a:hover, nav ul li nav a:focus {
+          background-color: #f3f3f3; }
+    nav .header-icons {
+      padding-left: 20%; }
+
+  .menu-valg {
+    background-color: #f3f3f3;
+    flex-grow: 2; }
+    .menu-valg .menu-content {
+      padding: 0px 15% 20px 15%;
+      display: flex;
+      justify-content: space-between; }
+      .menu-valg .menu-content h4 {
+        font-family: "Advent Pro", Arial, sans-serif;
+        font-weight: 400;
+        font-size: x-large;
+        margin-bottom: 0; }
+      .menu-valg .menu-content h5 {
+        font-family: "Advent Pro", Arial, sans-serif;
+        font-size: large;
+        margin: 10px 0; }
+      .menu-valg .menu-content a {
+        text-decoration: none;
+        color: #2a363b; }
+      .menu-valg .menu-content ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 5px 10px;
+        font-family: "Advent Pro", Arial, sans-serif; }
+      .menu-valg .menu-content form {
+        display: flex;
+        flex-direction: column;
+        font-family: "Advent Pro", Arial, sans-serif;
+        font-size: large; }
+        .menu-valg .menu-content form input {
+          width: 350px;
+          height: 30px;
+          border: 1px solid #e84a5f;
+          border-radius: 3px; }
+        .menu-valg .menu-content form input[type=submit] {
+          width: 40%;
+          margin: auto;
+          background-color: white;
+          border: none;
+          height: 30px;
+          border-radius: 3px;
+          font-size: large;
+          font-family: "Advent Pro", Arial, sans-serif;
+          color: #e84a5f;
+          font-weight: 500;
+          border: 1px solid #e84a5f; }
+        .menu-valg .menu-content form input[type=submit]:hover {
+          background-color: #e84a5f;
+          color: white; }
+    .menu-valg #menu-content-soeg {
+      display: flex;
+      flex-direction: column; }
+      .menu-valg #menu-content-soeg form {
+        display: flex;
+        flex-direction: row; }
+        .menu-valg #menu-content-soeg form input[type=text] {
+          width: 80%;
+          padding-left: 10px;
+          margin-top: 10px;
+          font-size: small;
+          color: #e84a5f; }
+        .menu-valg #menu-content-soeg form button[type=submit] {
+          width: 10%;
+          margin-left: 10%;
+          margin-top: 10px;
+          border-radius: 3px;
+          font-size: medium;
+          height: 30px;
+          font-family: "Advent Pro", Arial, sans-serif;
+          font-weight: 500;
+          border: 1px solid #e84a5f;
+          color: #e84a5f;
+          background-color: white; }
+        .menu-valg #menu-content-soeg form button[type=submit]:hover {
+          background-color: #e84a5f;
+          color: white; }
+      .menu-valg #menu-content-soeg #avanceret-form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: 15%; }
+        .menu-valg #menu-content-soeg #avanceret-form input {
+          height: 30px; }
+        .menu-valg #menu-content-soeg #avanceret-form button[type=submit] {
+          margin-top: 30px; }
+        .menu-valg #menu-content-soeg #avanceret-form select {
+          width: 100%;
+          margin: auto;
+          background-color: white;
+          border: none;
+          height: 30px;
+          border-radius: 3px;
+          font-size: large;
+          font-family: "Advent Pro", Arial, sans-serif;
+          color: #e84a5f;
+          font-weight: 500;
+          border: 1px solid #e84a5f; }
+        .menu-valg #menu-content-soeg #avanceret-form .avanceret-sog {
+          width: 18%;
+          margin-top: 10px; }
+          .menu-valg #menu-content-soeg #avanceret-form .avanceret-sog input {
+            width: 100%; }
+          .menu-valg #menu-content-soeg #avanceret-form .avanceret-sog .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 30px;
+            background: white;
+            outline: #e84a5f; }
+          .menu-valg #menu-content-soeg #avanceret-form .avanceret-sog .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 30px;
+            background: #e84a5f;
+            cursor: pointer; }
+          .menu-valg #menu-content-soeg #avanceret-form .avanceret-sog .slider::-moz-range-thumb {
+            width: 10px;
+            height: 30px;
+            background: #e84a5f;
+            cursor: pointer; } }
+main {
+  display: flex;
+  flex-direction: column; }
+  main img {
+    display: flex;
+    width: 90%;
+    margin: 10px auto; }
+
+@media screen and (min-width: 780px) {
+  main {
+    display: grid;
+    grid-template-columns: auto 45% 20px 45% auto;
+    grid-template-areas: ". imgone . imgtwo ." ". imgtree . imgfour ." ". imgfive . imgsix ."; }
+    main .imgone {
+      grid-area: imgone; }
+    main .imgtwo {
+      grid-area: imgtwo; }
+    main .imgtree {
+      grid-area: imgtree; }
+    main .imgfour {
+      grid-area: imgfour; }
+    main .imgfive {
+      grid-area: imgfive; }
+    main .imgsix {
+      grid-area: imgsix; }
+    main img {
+      width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

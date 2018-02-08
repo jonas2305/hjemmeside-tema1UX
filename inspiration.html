@@ -4,45 +4,289 @@
     <meta charset="UTF-8">
     <title>Inspiration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/pages/inspiration.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="gridinspiration">
-<h1 class="overskriv">inspriation
+<body>
 
-</h1>
+<!--HEADER BEGYNDER-->
+<header>
+    <nav class="site-nav">
 
-<section class="inspriration bar">
-<h2>forslag til dig</h2>
-<h3>alder</h3>
-<h3>køn</h3>
-    <div class="kønbar">
-<a href="#">mand</a>
-    <a href="#">dame</a>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/billetsalg.dk.logo.ny.png" alt="logo billetsalt.dk"/>
+            </a>
         </div>
-<h3>kategrier</h3>
-    <div class="kategorerbar">
-    <a href="#">musik</a>
-    <a href="#">kurger</a>
-    <a href="#">foedred</a>
-    <a href="#">oplevelser</a>
-    <a href="#">underholdning</a>
-    <a href="#">sport</a>
+
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
         </div>
-</section>
 
-<section class="map">
-<h2>i nærheden af dig</h2>
-<div class="postmunner">
-    <a href="#">postnummer</a>
-</div>
+        <ul class="open desktop">
+            <li><a href="#" class="menupunkt" data-menuId="menuud1">Kategorier</a></li>
+            <li><a href="inspiration.html" class="menupunkt" data-menuId="menuud2">Inspiration</a></li>
+            <li><a href="#" class="menupunkt" data-menuId="menuud3">Gavekort</a></li>
+            <li><a href="#" class="menupunkt" data-menuId="menuud4">Om os</a></li>
+            <li><a href="#" class="menupunkt" data-menuId="menuud5">Log ind</a></li>
+            <div class="header-icons">
+                <li class="lastchild">
+                    <a href="#" class="menupunkt" data-menuId="menuud6">
+                        <img src="images/if_Rounded-10_2024633.png" alt="soeg"/>
+                    </a>
+                </li>
+                <li class="lastchild">
+                    <a href="#" class="menupunkt" data-menuId="menuud7">
+                        <img src="images/if_Rounded-09_2024665.png" alt="indkøbskurv"/>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </nav>
 
+    <div class="menu-valg" id="menuud1">
+        <div class="menu-content">
+            <div id="menu-musik">
+                <h4>Musik</h4>
+                <a href="#"><h5>Koncert</h5></a>
+                <ul>
+                    <li><a href="#">Pop</a></li>
+                    <li><a href="#">Rock</a></li>
+                    <li><a href="#">Rap</a></li>
+                    <li><a href="#">Jazz</a></li>
+                    <li><a href="#">Elektronisk</a></li>
+                </ul>
+                <a href="#"><h5>Festival</h5></a>
+                <ul>
+                    <li><a href="#">København</a></li>
+                    <li><a href="#">Sjælland og øerne</a></li>
+                    <li><a href="#">Fyn</a></li>
+                    <li><a href="#">Jylland</a></li>
+                    <li><a href="#">Udlandet</a></li>
+                </ul>
+            </div>
+            <div id="menu-oplevelser">
+                <h4>Oplevelser</h4>
+                <a href="#"><h5>Kultur</h5></a>
+                <ul>
+                    <li><a href="#">Teater</a></li>
+                    <li><a href="#">Museum</a></li>
+                </ul>
+                <a href="#"><h5>Mad og drikke</h5></a>
+                <a href="#"><h5>Outdoor</h5></a>
+                <a href="#"><h5>Sport</h5></a>
+                <ul>
+                    <li><a href="#">Tilskuer</a></li>
+                    <li><a href="#">Deltager</a></li>
+                </ul>
+            </div>
+            <div id="menu-underholdning">
+                <h4>Underholdning</h4>
+                <a href="#"><h5>Familien</h5></a>
+                <ul>
+                    <li><a href="#">Forlystelser</a></li>
+                    <li><a href="#">Dyr</a></li>
+                </ul>
+                <a href="#"><h5>Voksne</h5></a>
+                <a href="#"><h5>Børn</h5></a>
+            </div>
+            <div id="menu-foredragkurser">
+                <h4>Foredrag & kurser</h4>
+                <a href="#"><h5>Foredrag</h5></a>
+                <ul>
+                    <li><a href="#">Privat</a></li>
+                    <li><a href="#">Erhverv</a></li>
+                </ul>
+                <a href="#"><h5>Kurser</h5></a>
+                <ul>
+                    <li><a href="#">Privat</a></li>
+                    <li><a href="#">Erhverv</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="menu-valg" id="menuud4">
+        <div class="menu-content">
+            <div id="menu-kontakt">
+                <h4>Kontakt</h4>
+                <a href="#"><h5>billet@salg.dk</h5></a>
+                <a href="#"><h5>+45 87654321</h5></a>
+            </div>
+            <div id="menu-info">
+                <h4>Info</h4>
+                <a href="#"><h5>Om billetsalg.dk</h5></a>
+                <a href="#"><h5>Bliv samarbejdspartner</h5></a>
+                <a href="#"><h5>Gebyrer og vilkår</h5></a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-valg" id="menuud5">
+        <div class="menu-content">
+            <div id="menu-logind">
+                <h4>Log ind</h4>
+                <form>
+                    <br>Mail:<br>
+                    <input type="email" name="email"><br>
+                    Kodeord:<br>
+                    <input type="password" name="password"><br>
+                    <input type="submit" value="Log ind">
+                </form>
+            </div>
+            <div id="menu-opret">
+                <h4>Opret bruger</h4>
+                <form>
+                    <br>Navn:<br>
+                    <input type="text" name="name"><br>
+                    Mail:<br>
+                    <input type="email" name="email"><br>
+                    Kodeord:<br>
+                    <input type="password" name="password"><br>
+                    Bekræft kodeord:<br>
+                    <input type="password" name="password"><br>
+                    <input type="submit" value="Opret bruger">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="menu-valg" id="menuud6">
+        <div class="menu-soeg">
+            <div class="menu-content" id="menu-content-soeg">
+                <h4>Søg</h4>
+                <form>
+                    <input type="text" placeholder="Søg..." name="search">
+                    <button type="submit">Søg</button>
+                </form>
+                <h4>Avanceret søgning</h4>
+                <form id="avanceret-form">
+                    <div class="avanceret-sog">
+                        Dato<br>
+                        <input type="date" name="date">
+                    </div>
+                    <div class="avanceret-sog">
+                        Sted (postnummer)<br>
+                        <input type="number" name="number">
+                    </div>
+                    <div class="avanceret-sog">
+                        Pris<br>
+                        <input type="range" name="price_min" value="1000" min="0" max="5000" class="slider">
+                    </div>
+                    <div class="avanceret-sog">
+                        Kategori<br>
+                        <select name="kategori">
+                            <option value="musik">Musik</option>
+                            <option value="oplevelser">Oplevelser</option>
+                            <option value="underholdning">Underholdning</option>
+                            <option value="foredrag">Foredrag</option>
+                            <option value="kurser">Kurser</option>
+                        </select>
+                    </div>
+                    <button type="submit">Søg</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="menu-valg" id="menuud7">
+        <div class="menu-content">
 
-</section>
+        </div>
+    </div>
+</header>
 
-<section class="soegningkrap">
-<a href="#">se forslag</a>
+<main class="gridinspiration">
+    <h1 class="overskriv">
+        Inspriation
+    </h1>
 
+    <section class="inspriration insfelt">
+        <h2>Forslag til dig</h2>
+        <h3>Alder</h3>
+        <h3>Køn</h3>
+        <div class="kønbar">
+            <a href="#">mand</a>
+            <a href="#">dame</a>
+        </div>
+        <h3>kategrier</h3>
+        <div class="kategorerbar">
+            <a href="#">musik</a>
+            <a href="#">kurger</a>
+            <a href="#">foedred</a>
+            <a href="#">oplevelser</a>
+            <a href="#">underholdning</a>
+            <a href="#">sport</a>
+        </div>
+    </section>
 
-</section>
+    <section class="map insfelt">
+        <h2>I nærheden af dig</h2>
+        <div>
+            <form class="postnummer">
+                <input type="number" name="postnummer" placeholder="Postnummer...">
+            </form>
+        </div>
+        <h4>Resultater</h4>
+        <div class="soegeforslag">
+            <div class="forslag">
+                <img src="images/concert-768722_640.jpg" alt="koncert billede">
+                <div>
+                    <h4>Rasmus Seeback</h4>
+                    <p>Skråen, Aalborg</p>
+                    <p>23-07-2018</p>
+                </div>
+                <button>Se mere</button>
+            </div>
+            <div class="forslag">
+                <img src="images/concert-768722_640.jpg" alt="koncert billede">
+                <div>
+                    <h4>Rasmus Seeback</h4>
+                    <p>Skråen, Aalborg</p>
+                    <p>23-07-2018</p>
+                </div>
+                <button>Se mere</button>
+            </div>
+            <div class="forslag">
+                <img src="images/concert-768722_640.jpg" alt="koncert billede">
+                <div>
+                    <h4>Rasmus Seeback</h4>
+                    <p>Skråen, Aalborg</p>
+                    <p>23-07-2018</p>
+                </div>
+                <button>Se mere</button>
+            </div>
+            <div class="forslag">
+            <img src="images/concert-768722_640.jpg" alt="koncert billede">
+            <div>
+                <h4>Rasmus Seeback</h4>
+                <p>Skråen, Aalborg</p>
+                <p>23-07-2018</p>
+            </div>
+            <button>Se mere</button>
+            </div>
+            <div class="forslag">
+                <img src="images/concert-768722_640.jpg" alt="koncert billede">
+                <div>
+                    <h4>Rasmus Seeback</h4>
+                    <p>Skråen, Aalborg</p>
+                    <p>23-07-2018</p>
+                </div>
+                <button>Se mere</button>
+            </div>
+            <div class="forslag">
+                <img src="images/concert-768722_640.jpg" alt="koncert billede">
+                <div>
+                    <h4>Rasmus Seeback</h4>
+                    <p>Skråen, Aalborg</p>
+                    <p>23-07-2018</p>
+                </div>
+                <button>Se mere</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="soegningkrap">
+        <a href="#">se forslag</a>
+    </section>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

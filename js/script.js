@@ -10,13 +10,9 @@ $(document).ready(function () {
     });
 
 
-    $('.menupunkt').on('mouseover', function () {
-        var menuId = $(this).attr('data-menuid');
-        $('#'+menuId).show();
-    });
     $('.menupunkt').on('click', function () {
         var menuId = $(this).attr('data-menuid');
-        $('#'+menuId).hide();
+        $('#'+menuId).slideToggle('fast');
     });
 
 });

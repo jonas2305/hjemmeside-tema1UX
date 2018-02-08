@@ -1,2 +1,14 @@
 
 //Overordnet CSS med link til andre dokumenter
+
+$black: #2a363b;
+$lightgrey: #f3f3f3;
+$yellow: #f6ec8d;
+$red: #e84a5f;
+
+$primary-font: "Advent Pro", Arial, sans-serif;
+
+
+
+@import "pages/_inspiration.scss",
+        "modules/_header.scss";

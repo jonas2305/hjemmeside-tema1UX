@@ -1,10 +1,3 @@
-$black: #2a363b;
-$lightgrey: #f3f3f3;
-$yellow: #f6ec8d;
-$red: #e84a5f;
-
-$primary-font: "Advent Pro", Arial, sans-serif;
-
 
 nav{
   margin: 0;
@@ -138,7 +131,6 @@ nav{
      }
   }
   .menu-valg{
-    min-height: 200px;
     background-color: $lightgrey;
     flex-grow: 2;
     .menu-content{
@@ -287,7 +279,6 @@ nav{
 
 //CSS TIL FORSIDE
 main{
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   img{

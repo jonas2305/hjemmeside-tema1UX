@@ -1,0 +1,149 @@
+
+main{
+  h1 {
+    text-align: center;
+    font-family: $primary-font;
+  }
+  h2{
+    font-family: $primary-font;
+  }
+  h4{
+    font-family: $primary-font;
+    margin-bottom: 5px;
+  }
+  .insfelt{
+    padding: 30px;
+    background-color: $lightgrey;
+  }
+  .inspriration {
+    margin: 0 50px 0 50px;
+    a {
+      background-color: #444444;
+      color: white;
+      padding: 10px 30px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 5px 50px;
+      display: inline-block;
+    }
+    .kategorerbar{
+      display: flex;
+      flex-flow: column;
+      a {
+        background-color: $black;
+        color: honeydew;
+        padding: 10px 30px;
+        cursor: pointer;
+        margin: 5px 50px;
+        padding: 4px;
+      }
+    }
+  }
+  .map {
+    display: flex;
+    flex-direction: column;
+    .postnummer{
+      input{
+        width: 90%;
+        height: 30px;
+        padding: 10px;
+        font-size: medium;
+        border: 1px solid $red;
+        border-radius: 3px;
+      }
+    }
+    .soegeforslag{
+      height: 300px;
+      overflow: hidden;
+      overflow-y: scroll;
+      .forslag{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        padding: 5px;
+        h4{
+          font-family: $primary-font;
+          margin: 2px;
+        }
+        p{
+          font-family: $primary-font;
+          color: $red;
+          margin: 2px;
+          font-size: small;
+        }
+        img{
+          height: 60px;
+          width: 60px;
+          margin: 0px;
+        }
+        button{
+          background-color: white;
+          border: none;
+          width: 30%;
+          font-size: large;
+          font-family: $primary-font;
+          color: $red;
+          font-weight: 500;
+          border: 1px solid $red;
+        }
+        button:hover{
+          background-color: $red;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+
+.soegningkrap{
+  display: flex;
+  justify-content: flex-end;
+  a{
+    background-color: #444444;
+    color: white;
+    padding: 10px 30px;
+    color: #e84a5f;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px 50px;
+    display: inline-block;
+
+
+  }
+}
+
+
+
+
+  //grid//
+@supports (grid-area: auto) {
+  @media screen and (min-width: 600px){
+
+  .gridinspiration {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    grid-template-areas: "overskriv overskriv"
+                          "bar map"
+                        "soegningkrap .";
+  }
+
+  .overskriv {
+    grid-area: overskriv;
+  }
+  .inspriration {
+    grid-area: bar;
+
+  }
+  .map {
+    grid-area: map;
+
+  }
+  .soegningkrap {
+    grid-area: soegningkrap;
+
+  }
+}}

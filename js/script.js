@@ -15,4 +15,8 @@ $(document).ready(function () {
         $('#'+menuId).slideToggle('fast');
     });
 
+    $('.kategoriknap').click(function () {
+        $(this).css('opacity', '1');
+    });
+
 });

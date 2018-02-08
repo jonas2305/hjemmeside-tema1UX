@@ -1,0 +1,53 @@
+
+.mainkoncert{
+  .popslider{
+    background-color: $lightgrey;
+    padding: 15px;
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    .popelement{
+      background-color: white;
+      width: 140px;
+      padding: 10px;
+      margin-right: 15px;
+      img{
+        width: 140px;
+        margin: 0px;
+      }
+      h5{
+        font-family: $primary-font;
+        font-size: large;
+        margin: 10px 2px 2px 2px;
+      }
+      p{
+        font-family: $primary-font;
+        color: $red;
+        margin: 2px;
+      }
+      button{
+        background-color: white;
+        border: none;
+        width: 100%;
+        font-size: large;
+        font-family: $primary-font;
+        color: $red;
+        font-weight: 500;
+        margin-top: 10px;
+        border: 1px solid $red;
+      }
+      button:hover{
+        background-color: $red;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 780px){
+  .mainkoncert{
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+}

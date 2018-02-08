@@ -20,7 +20,7 @@ main{
     background-color: $lightgrey;
   }
   .inspriration {
-    margin: 0 50px 0 50px;
+    margin-bottom: 20px;
     a {
       display: flex;
       justify-content: center;
@@ -104,6 +104,11 @@ main{
         justify-content: space-between;
         background-color: white;
         padding: 5px;
+        .forslag-indhold{
+          position: relative;
+          margin-left: 5px;
+          width: 100%;
+        }
         h4{
           font-family: $primary-font;
           margin: 2px;
@@ -122,7 +127,7 @@ main{
         button{
           background-color: white;
           border: none;
-          width: 30%;
+          width: 55%;
           font-size: large;
           font-family: $primary-font;
           color: $red;
@@ -138,30 +143,23 @@ main{
   }
 }
 //grid
-@supports (grid-area: auto) {
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 780px){
+    .maininspiration{
+      display: grid;
+      grid-template-columns: auto 60% 20px 30% auto;
+      grid-template-areas:  ". overskriv overskriv overskriv ."
+                            ". bar . map .";
 
-  .gridinspiration {
-    display: grid;
-    grid-template-columns: 66% 33%;
-    grid-template-areas: "overskriv overskriv"
-                          "bar map"
-                        "soegningkrap .";
-  }
+      .overskriv{
+        grid-area: overskriv;
+      }
+      .inspriration{
+        grid-area: bar;
+        margin-bottom: 0px;
+      }
+      .map{
+        grid-area: map;
+      }
 
-  .overskriv {
-    grid-area: overskriv;
+    }
   }
-  .inspriration {
-    grid-area: bar;
-
-  }
-  .map {
-    grid-area: map;
-
-  }
-  .soegningkrap {
-    grid-area: soegningkrap;
-
-  }
-}}

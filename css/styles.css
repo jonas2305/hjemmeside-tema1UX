@@ -13,7 +13,7 @@ main .insfelt {
   padding: 30px;
   background-color: #f3f3f3; }
 main .inspriration {
-  margin: 0 50px 0 50px; }
+  margin-bottom: 20px; }
   main .inspriration a {
     display: flex;
     justify-content: center;
@@ -85,6 +85,10 @@ main .map {
       justify-content: space-between;
       background-color: white;
       padding: 5px; }
+      main .map .soegeforslag .forslag .forslag-indhold {
+        position: relative;
+        margin-left: 5px;
+        width: 100%; }
       main .map .soegeforslag .forslag h4 {
         font-family: "Advent Pro", Arial, sans-serif;
         margin: 2px; }
@@ -100,7 +104,7 @@ main .map {
       main .map .soegeforslag .forslag button {
         background-color: white;
         border: none;
-        width: 30%;
+        width: 55%;
         font-size: large;
         font-family: "Advent Pro", Arial, sans-serif;
         color: #e84a5f;
@@ -110,24 +114,18 @@ main .map {
         background-color: #e84a5f;
         color: white; }
 
-@supports (grid-area: auto) {
-  @media screen and (min-width: 600px) {
-    .gridinspiration {
-      display: grid;
-      grid-template-columns: 66% 33%;
-      grid-template-areas: "overskriv overskriv" "bar map" "soegningkrap ."; }
-
-    .overskriv {
+@media screen and (min-width: 780px) {
+  .maininspiration {
+    display: grid;
+    grid-template-columns: auto 60% 20px 30% auto;
+    grid-template-areas: ". overskriv overskriv overskriv ." ". bar . map ."; }
+    .maininspiration .overskriv {
       grid-area: overskriv; }
-
-    .inspriration {
-      grid-area: bar; }
-
-    .map {
-      grid-area: map; }
-
-    .soegningkrap {
-      grid-area: soegningkrap; } } }
+    .maininspiration .inspriration {
+      grid-area: bar;
+      margin-bottom: 0px; }
+    .maininspiration .map {
+      grid-area: map; } }
 nav {
   margin: 0;
   padding: 0; }
@@ -367,23 +365,117 @@ main {
     margin: 10px auto; }
 
 @media screen and (min-width: 780px) {
-  main {
+  .mainforside {
     display: grid;
     grid-template-columns: auto 45% 20px 45% auto;
     grid-template-areas: ". imgone . imgtwo ." ". imgtree . imgfour ." ". imgfive . imgsix ."; }
-    main .imgone {
+    .mainforside .imgone {
       grid-area: imgone; }
-    main .imgtwo {
+    .mainforside .imgtwo {
       grid-area: imgtwo; }
-    main .imgtree {
+    .mainforside .imgtree {
       grid-area: imgtree; }
-    main .imgfour {
+    .mainforside .imgfour {
       grid-area: imgfour; }
-    main .imgfive {
+    .mainforside .imgfive {
       grid-area: imgfive; }
-    main .imgsix {
+    .mainforside .imgsix {
       grid-area: imgsix; }
-    main img {
+    .mainforside img {
       width: 100%; } }
+.mainmusik .popslider {
+  background-color: #f3f3f3;
+  padding: 15px;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll; }
+  .mainmusik .popslider .popelement {
+    background-color: white;
+    width: 140px;
+    padding: 10px;
+    margin-right: 15px; }
+    .mainmusik .popslider .popelement img {
+      width: 140px;
+      margin: 0px; }
+    .mainmusik .popslider .popelement h5 {
+      font-family: "Advent Pro", Arial, sans-serif;
+      font-size: large;
+      margin: 10px 2px 2px 2px; }
+    .mainmusik .popslider .popelement p {
+      font-family: "Advent Pro", Arial, sans-serif;
+      color: #e84a5f;
+      margin: 2px; }
+    .mainmusik .popslider .popelement button {
+      background-color: white;
+      border: none;
+      width: 100%;
+      font-size: large;
+      font-family: "Advent Pro", Arial, sans-serif;
+      color: #e84a5f;
+      font-weight: 500;
+      margin-top: 10px;
+      border: 1px solid #e84a5f; }
+    .mainmusik .popslider .popelement button:hover {
+      background-color: #e84a5f;
+      color: white; }
+
+@media screen and (min-width: 780px) {
+  .mainmusik {
+    display: grid;
+    grid-template-columns: auto 45% 20px 45% auto;
+    grid-template-areas: ". overskrift-musik overskrift-musik overskrift-musik ." ". musik-billede-et . musik-billede-to ." ". musik-populer musik-populer musik-populer ."; }
+    .mainmusik .overskrift-musik {
+      grid-area: overskrift-musik; }
+    .mainmusik .musik-billede-et {
+      grid-area: musik-billede-et; }
+      .mainmusik .musik-billede-et img {
+        width: 100%; }
+    .mainmusik .musik-billede-to {
+      grid-area: musik-billede-to; }
+      .mainmusik .musik-billede-to img {
+        width: 100%; }
+    .mainmusik .musik-populer {
+      grid-area: musik-populer; } }
+.mainkoncert .popslider {
+  background-color: #f3f3f3;
+  padding: 15px;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll; }
+  .mainkoncert .popslider .popelement {
+    background-color: white;
+    width: 140px;
+    padding: 10px;
+    margin-right: 15px; }
+    .mainkoncert .popslider .popelement img {
+      width: 140px;
+      margin: 0px; }
+    .mainkoncert .popslider .popelement h5 {
+      font-family: "Advent Pro", Arial, sans-serif;
+      font-size: large;
+      margin: 10px 2px 2px 2px; }
+    .mainkoncert .popslider .popelement p {
+      font-family: "Advent Pro", Arial, sans-serif;
+      color: #e84a5f;
+      margin: 2px; }
+    .mainkoncert .popslider .popelement button {
+      background-color: white;
+      border: none;
+      width: 100%;
+      font-size: large;
+      font-family: "Advent Pro", Arial, sans-serif;
+      color: #e84a5f;
+      font-weight: 500;
+      margin-top: 10px;
+      border: 1px solid #e84a5f; }
+    .mainkoncert .popslider .popelement button:hover {
+      background-color: #e84a5f;
+      color: white; }
+
+@media screen and (min-width: 780px) {
+  .mainkoncert {
+    display: flex;
+    width: 90%;
+    margin: auto; } }
 
 /*# sourceMappingURL=styles.css.map */

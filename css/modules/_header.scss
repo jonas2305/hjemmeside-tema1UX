@@ -290,7 +290,7 @@ main{
 
 
 @media screen and (min-width: 780px) {
-  main{
+  .mainforside{
     display: grid;
     grid-template-columns: auto 45% 20px 45% auto;
     grid-template-areas:  ". imgone . imgtwo ."

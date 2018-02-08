@@ -1,6 +1,54 @@
-nav {
+$black: #2a363b;
+$lightgrey: #f3f3f3;
+$yellow: #f6ec8d;
+$red: #e84a5f;
+
+$primary-font: "Advent Pro", Arial, sans-serif;
+
+
+nav{
   margin: 0;
   padding: 0;
+  .logo{
+    padding: 1.2em 1.3em;
+    img{
+      width: 150px;
+    }
+  }
+  .menu-toggle {
+    position: absolute;
+    padding: 0.8em;
+    top: 2.2em;
+    right: .5em;
+    cursor: pointer;
+    .hamburger, .hamburger::before, .hamburger::after {
+      content: '';
+      display: block;
+      background: $black;
+      height: 3px;
+      width: 2em;
+      border-radius: 3px;
+      -webkit-transition: all ease-in-out 350ms;
+      transition: all ease-in-out 350ms;
+    }
+    .hamburger::before {
+      -webkit-transform: translateY(-7px);
+      transform: translateY(-7px);
+    }
+    .hamburger::after {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    .open .hamburger {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    .open .hamburger::before { display: none; }
+    .open .hamburger::after {
+      -webkit-transform: translateY(-1px) rotate(-90deg);
+      transform: translateY(-1px) rotate(-90deg);
+    }
+  }
   ul {
     display: flex;
     flex-direction: column;
@@ -8,111 +56,276 @@ nav {
     padding: 0;
     margin: 0;
     display: none;
+    li { border-bottom: 1px solid $lightgrey; }
+    .lastchild{
+      border-bottom: none;
+    }
+    a {                                          
+      color: $black;
+      background: #fff;
+      display: block;
+      padding: 1em 4em 1em 3em;
+      font-family: $primary-font;
+      font-size: 1.3em;
+      text-decoration: none;
+    }
+    a:hover, nav a:focus {
+      background: $lightgrey;
+    }
   }
-  li { border-bottom: 1px solid #f3f3f3; }
-  li:last-child { border-bottom: none; }
-  a {
-    color: #444;
-    background: #fff;
+  nav ul.opening {
     display: block;
-    padding: 1em 4em 1em 3em;
-    font-family: "Advent Pro";
-    font-size: 1.3em;
-    text-decoration: none;
+    height: 30px;
   }
-  a:hover, nav a:focus { background: #f3f3f3; }
+  .site-nav--icon {
+    font-size: 2em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: $black;
+  }
+  .header-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a{
+      padding: 0.8em;
+    }
+    img{
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
-nav ul.opening {
-  display: block;
-  height: 30px;
-}
-
-.site-nav--icon {
-  font-size: 1.4em;
-  margin-right: 1em;
-  width: 1.1em;
-  text-align: right;
-  color: rgba(255,255,255,.8);
-}
-
-.menu-toggle {
-  position: absolute;
-  padding: 0.8em;
-  top: 1em;
-  right: .5em;
-  cursor: pointer;
-}
-
-.hamburger, .hamburger::before, .hamburger::after {
-  content: '';
-  display: block;
-  background: #444;
-  height: 3px;
-  width: 2em;
-  border-radius: 3px;
-  -webkit-transition: all ease-in-out 350ms;
-  transition: all ease-in-out 350ms;
-}
-
-.hamburger::before {
-  -webkit-transform: translateY(-7px);
-  transform: translateY(-7px);
-}
-
-.hamburger::after {
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);
-}
-
-.open .hamburger {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.open .hamburger::before { display: none; }
-
-.open .hamburger::after {
-  -webkit-transform: translateY(-1px) rotate(-90deg);
-  transform: translateY(-1px) rotate(-90deg);
+.menu-valg{
+  display: none;
 }
 
 @media (min-width: 780px) {
-
-  .menu-toggle { display: none; }
-
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: auto;
-  }
-
-  nav li {
-    flex: 1 1 auto;
-    border: none;
-  }
-
-  nav li a {
-    padding: 1.5em 1.3em 1.5em 1.3em;
-    margin: 0;
-    border: none;
-    background-color: #fff;
-  }
-
-  nav a:hover,  nav a:focus { background-color: rgba(255,255,255,.10); }
-
-  .logo {
-    flex: 0 0 200px;
-    margin: 0;
-    padding-left: 20px;
-  }
-
-  nav {
+  nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
     background-color: #fff;
+    .logo{
+      flex: 0 0 200px;
+      margin: 0;
+      padding-left: 20px;
+    }
+    .menu-toggle { display: none; }
+    ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin: auto auto auto 7%;
+      li {
+        flex: 1 1 auto;
+        border: none;
+        a {
+          padding: 1.5em 1.3em 1.5em 1.3em;
+          margin: 0;
+          border: none;
+          background-color: #fff;
+        }
+        nav a:hover, nav a:focus {
+          background-color: $lightgrey;
+        }
+      }
+     }
+     .header-icons{
+       padding-left: 20%;
+     }
   }
+  .menu-valg{
+    min-height: 200px;
+    background-color: $lightgrey;
+    flex-grow: 2;
+    .menu-content{
+      padding: 0px 15% 20px 15%;
+      display: flex;
+      justify-content: space-between;
+      h4{
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: x-large;
+        margin-bottom: 0;
+      }
+      h5{
+        font-family: $primary-font;
+        font-size: large;
+        margin: 10px 0;
+      }
+      a{
+        text-decoration: none;
+        color: $black;
+      }
+      ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 5px 10px;
+        font-family: $primary-font;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        font-family: $primary-font;
+        font-size: large;
+        input{
+          width: 350px;
+          height: 30px;
+          border: 1px solid $red;
+          border-radius: 3px;
+        }
+        input[type=submit]{
+          width: 40%;
+          margin:auto;
+          background-color: white;
+          border: none;
+          height: 30px;
+          border-radius: 3px;
+          font-size: large;
+          font-family: $primary-font;
+          color: $red;
+          font-weight: 500;
+          border: 1px solid $red;
+        }
+        input[type=submit]:hover{
+          background-color: $red;
+          color: white;
+        }
+      }
+    }
+    #menu-content-soeg{
+      display: flex;
+      flex-direction: column;
+      form{
+        display: flex;
+        flex-direction: row;
+        input[type=text]{
+          width: 80%;
+          padding-left: 10px;
+          margin-top: 10px;
+          font-size: small;
+          color: $red;
+        }
+        button[type=submit]{
+          width: 10%;
+          margin-left: 10%;
+          margin-top: 10px;
+          border-radius: 3px;
+          font-size: medium;
+          height: 30px;
+          font-family: $primary-font;
+          font-weight: 500;
+          border: 1px solid $red;
+          color: $red;
+          background-color: white;
+        }
+        button[type=submit]:hover{
+          background-color: $red;
+          color: white;
+        }
+      }
+      #avanceret-form{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: 15%;
+        input{
+          height: 30px;
+        }
+        button[type=submit]{
+          margin-top: 30px;
+        }
+        select{
+          width: 100%;
+          margin:auto;
+          background-color: white;
+          border: none;
+          height: 30px;
+          border-radius: 3px;
+          font-size: large;
+          font-family: $primary-font;
+          color: $red;
+          font-weight: 500;
+          border: 1px solid $red;
+        }
+        .avanceret-sog{
+          width: 18%;
+          margin-top: 10px;
+          input{
+            width: 100%;
+          }
+          .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 30px;
+            background: white;
+            outline: $red;
+          }
+          .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 30px;
+            background: $red;
+            cursor: pointer;
+          }
+          .slider::-moz-range-thumb {
+            width: 10px;
+            height: 30px;
+            background: $red;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
 
+
+//CSS TIL FORSIDE
+main{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  img{
+    display: flex;
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+
+@media screen and (min-width: 780px) {
+  main{
+    display: grid;
+    grid-template-columns: auto 45% 20px 45% auto;
+    grid-template-areas:  ". imgone . imgtwo ."
+                          ". imgtree . imgfour ."
+                          ". imgfive . imgsix .";
+    .imgone{
+      grid-area: imgone;
+    }
+    .imgtwo{
+      grid-area: imgtwo;
+    }
+    .imgtree{
+      grid-area: imgtree;
+    }
+    .imgfour{
+      grid-area: imgfour;
+    }
+    .imgfive{
+       grid-area: imgfive;
+     }
+    .imgsix{
+      grid-area: imgsix;
+    }
+    img{
+      width: 100%;
+    }
+
+  }
 }
